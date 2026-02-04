@@ -15,9 +15,25 @@ app.get("/api/courses", (req, res) => {
     { id: 2, title: "Python Basics" }
   ]);
 });
-
+app.get("/api/projects", (req, res) => {
+  res.json([
+    {
+      id: 1,
+      title: "Build a Landing Page",
+      budget: "₹5,000",
+      skills: ["HTML", "CSS"]
+    },
+    {
+      id: 2,
+      title: "Fix Python Script",
+      budget: "₹3,000",
+      skills: ["Python"]
+    }
+  ]);
+});
 const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 
 });
+
